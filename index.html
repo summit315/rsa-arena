@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RSA Arena Tournament</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 25px #22c55e55;
+}
+
+h1 {
+  text-align: center;
+  color: #22c55e;
+  text-shadow: 0 0 10px #22c55e;
+}
+
+.group {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* ABOUT BOX */
+.about {
+  background: #020617;
+  border: 1px solid #334155;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px #000;
+}
+
+.about h3 {
+  margin: 0 0 8px 0;
+  color: #22c55e;
+}
+
+.about p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.page-btn {
+  display: block;
+  text-align: center;
+  background: #1877f2;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.page-btn:hover {
+  box-shadow: 0 0 12px #1877f2;
+}
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #22c55e;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #16a34a;
+  box-shadow: 0 0 15px #22c55e;
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: center;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>RSA Arena Tournament</h1>
+
+  <div class="group">
+    Group Name: <b>RSA Arena</b>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="about">
+    <h3>About Tournament</h3>
+    <p><b>Admins:</b></p>
+    <p>1) Rafiu</p>
+    <p>2) Summit</p>
+    <p>3) Arijit</p>
+    <p><b>Entry Fee:</b> 0 TK</p>
+  </div>
+
+  <!-- FACEBOOK PAGE -->
+  <a href="https://www.facebook.com/share/18TEpjHiSn/" target="_blank" class="page-btn">
+    Follow Our Facebook Page
+  </a>
+
+  <h3 style="text-align:center;">Join Tournament</h3>
+
+  <!-- FORM -->
+  <input type="text" id="name" placeholder="Name">
+  <input type="text" id="squad" placeholder="Squad Name">
+  <textarea id="members" placeholder="Name of Squad Members"></textarea>
+  <input type="text" id="phone" placeholder="Phone Number">
+  <input type="email" id="email" placeholder="Email Address">
+
+  <button onclick="sendWhatsApp()">JOIN NOW</button>
+
+  <div class="footer">
+    "Tournament er date jante chokh rakhun FACEBOOK e"
+  </div>
+</div>
+
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let squad = document.getElementById("squad").value;
+  let members = document.getElementById("members").value;
+  let phone = document.getElementById("phone").value;
+  let email = document.getElementById("email").value;
+
+  let message = `🔥 RSA Arena Tournament 🔥%0A
+Name: ${name}%0A
+Squad Name: ${squad}%0A
+Squad Members: ${members}%0A
+Phone: ${phone}%0A
+Email: ${email}`;
+
+  let url = "https://wa.me/8801343081588?text=" + message;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
